@@ -57,9 +57,8 @@ $ terraform show
 ##
 
 
-**Desfazendo toda a infraestrutura criada**:
+**Desfazendo toda a infraestrutura criada**: `Cuidado`
 
-*Cuidado: Esse comando remove todas as configurações criadas* 
 
 ```
 $ terraform destroy
