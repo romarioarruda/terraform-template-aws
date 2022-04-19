@@ -68,8 +68,8 @@ $ terraform destroy
 
 **Links de referência**:
 
-* https://www.terraform.io/downloads
+* [Dowload Terraform](https://www.terraform.io/downloads)
 
-* https://registry.terraform.io/
+* [Terraform Registry](https://registry.terraform.io/)
 
-* https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
+* [AWS CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html)
