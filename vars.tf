@@ -5,6 +5,10 @@ variable "amis" {
   }
 }
 
+variable "instance_tags" {
+  default = "ubuntu_20_04"
+}
+
 variable "ips_com_acesso_ssh_permitido" {
   default = ["45.186.123.225/32"]
 }

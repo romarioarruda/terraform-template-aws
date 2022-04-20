@@ -15,9 +15,10 @@ resource "aws_instance" "dev-sa" {
   instance_type = var.instance_type
   key_name = var.key_name
   tags = {
-    "Name" = "ubuntu_20_04/1"
+    "Name" = var.instance_tags
   }
-  vpc_security_group_ids = ["${aws_security_group.acesso_ssh-sa-east-1.id}"]
+  vpc_security_group_ids = [aws_security_group.acesso_ssh-sa-east-1.id, aws_security_group.acesso_web-sa-east-1.id]
+  user_data = file("user-data/ubuntu_server.sh")
 }
 
 resource "aws_instance" "dev-us" {
@@ -27,9 +28,10 @@ resource "aws_instance" "dev-us" {
   instance_type = var.instance_type
   key_name = var.key_name
   tags = {
-    "Name" = "ubuntu_20_04/1"
+    "Name" = var.instance_tags
   }
-  vpc_security_group_ids = ["${aws_security_group.acesso_ssh-us-east-1.id}"]
+  vpc_security_group_ids = [aws_security_group.acesso_ssh-us-east-1.id, aws_security_group.acesso_web-us-east-1.id]
+  user_data = file("user-data/ubuntu_server.sh")
 }
 
 resource "aws_s3_bucket" "dev-sa" {
